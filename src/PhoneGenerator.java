@@ -1,15 +1,15 @@
 import java.util.Random;
 
-public class PhoneGenerator {
+public class Generator {
     public static void main(String[] args) {
-        String Name = Name();
-        String PhoneNumber = PhoneNumber();
+        String name = name();
+        String num = num();
 
-        System.out.println("Random Name: " + Name);
-        System.out.println("Random Phone Number: " + PhoneNumber);
+        System.out.println("Random name: " + name);
+        System.out.println("Random  num: " + num);
     }
 
-    static String Name() {
+    static String name() {
         Random random = new Random();
         StringBuilder name = new StringBuilder();
 
@@ -21,14 +21,14 @@ public class PhoneGenerator {
         return name.toString();
     }
 
-    static String PhoneNumber() {
+    static String num() {
         Random random = new Random();
-        StringBuilder phoneNumber = new StringBuilder("9");
+        StringBuilder phonenum = new StringBuilder("9");
 
         for (int i = 0; i < 9; i++) {
-            phoneNumber.append(random.nextInt(10));
+            phonenum.append(random.nextInt(10));
         }
 
-        return phoneNumber.toString();
+        return phonenum.toString();
     }
 }
